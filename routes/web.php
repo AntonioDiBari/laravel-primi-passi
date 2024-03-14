@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $title = "Hello Laravel";
-    $greetings = ["Ciao", "Benvenuto", "Welcome"];
+    $greetings = config("greetings");
     return view('home', compact('title', 'greetings'));
 });
